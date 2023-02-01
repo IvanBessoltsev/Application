@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  data:
+    mongodb:
+      database: test
+      port: 27017
+      host: localhost
+
+server:
+  port: 8081
+
+
+uploadFolder: D://photo/
