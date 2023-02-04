@@ -81,4 +81,19 @@ public interface Urls {
         }
     }
 
+    interface Dashboard {
+        String PART = "dashboard";
+        String FULL = Urls.FULL + "/" + PART;
+
+        interface CountUsersByDepartment {
+            String PART = "countUserByDepartment";
+            String FULL = Urls.Dashboard.FULL + "/" + PART;
+        }
+
+        interface CountUsersByCity {
+            String PART = "countUserByCity";
+            String FULL = Urls.Dashboard.FULL + "/" + PART;
+        }
+    }
+
 }

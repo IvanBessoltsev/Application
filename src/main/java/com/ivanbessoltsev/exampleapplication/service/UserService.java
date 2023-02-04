@@ -1,6 +1,5 @@
 package com.ivanbessoltsev.exampleapplication.service;
 
-import com.ivanbessoltsev.exampleapplication.common.CRUD;
 import com.ivanbessoltsev.exampleapplication.exception.NotFoundUserException;
 import com.ivanbessoltsev.exampleapplication.filter.RequestFilterDTO;
 import com.ivanbessoltsev.exampleapplication.mapping.UserMapper;
@@ -8,6 +7,7 @@ import com.ivanbessoltsev.exampleapplication.model.dto.user.CreateUserDTO;
 import com.ivanbessoltsev.exampleapplication.model.entity.User;
 import com.ivanbessoltsev.exampleapplication.model.entity.User_;
 import com.ivanbessoltsev.exampleapplication.predicate.BuildPredicatesByFilter;
+import com.ivanbessoltsev.exampleapplication.projection.NameAndCount;
 import com.ivanbessoltsev.exampleapplication.repository.UserRepository;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import lombok.RequiredArgsConstructor;
@@ -50,5 +50,13 @@ public class UserService {
         BooleanExpression predicate = buildPredicatesByFilter.buildPredicates(requestFilterDTO);
         Sort sort = Sort.by(User_.LAST_NAME).ascending().and(Sort.by(User_.FIRST_NAME)).ascending();
         return (List<User>) userRepository.findAll(predicate, sort);
+    }
+
+    public List<NameAndCount> getInfoUsersByDepartment(){
+        return userRepository.countUsersByDepartment();
+    }
+
+    public List<NameAndCount> getInfoCountUsersByCity() {
+        return userRepository.countUsersByCity();
     }
 }
