@@ -94,6 +94,11 @@ public interface Urls {
             String PART = "countUserByCity";
             String FULL = Urls.Dashboard.FULL + "/" + PART;
         }
+
+        interface CountChildrenByUser{
+            String PART = "countChildrenByUser";
+            String FULL = Urls.Dashboard.FULL + "/" + PART;
+        }
     }
 
 }

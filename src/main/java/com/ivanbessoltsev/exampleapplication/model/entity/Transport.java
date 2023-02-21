@@ -8,9 +8,8 @@ import javax.persistence.Id;
 
 
 @Data
-@Document(collection = "transport")
+@Document(value = "transport")
 public class Transport {
-    @Id
     private String id;
     private String maker;
     private String model;

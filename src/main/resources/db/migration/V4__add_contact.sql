@@ -1,0 +1,1 @@
+INSERT INTO contact (phone_number, email, city_id, user_id) values ('+7-999-999-99-99', 'name@mail.ru', 2, 2);

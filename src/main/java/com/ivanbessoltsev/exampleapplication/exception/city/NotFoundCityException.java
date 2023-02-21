@@ -1,4 +1,4 @@
-package com.ivanbessoltsev.exampleapplication.exception;
+package com.ivanbessoltsev.exampleapplication.exception.city;
 
 import com.ivanbessoltsev.exampleapplication.constant.Errors;
 import org.springframework.http.HttpStatus;
