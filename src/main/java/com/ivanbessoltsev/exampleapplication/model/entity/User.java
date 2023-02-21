@@ -26,20 +26,26 @@ public class User {
     @Column(name = "login", nullable = false)
     private String login;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "middle_name")
+    @Column(name = "middle_name", nullable = false)
     private String middleName;
+
+    @Column(name = "date_of_birth", nullable = false)
+    private LocalDate dateOfBirth;
 
     @Column(name = "date_of_employment", nullable = false)
     private LocalDate dateOfEmployment;
 
     @Column(name = "date_of_dismissal")
     private LocalDate dateOfDismissal;
+
+    @Column(name = "is_active", columnDefinition = "true")
+    private boolean isActive;
 
     @JsonIgnore
     @OneToOne(mappedBy = "user")

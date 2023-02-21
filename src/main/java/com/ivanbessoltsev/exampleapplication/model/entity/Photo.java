@@ -20,6 +20,7 @@ public class Photo {
     @SequenceGenerator(name = "photo_id_seq", sequenceName = "photo_id_seq", allocationSize = 1)
     private Integer id;
 
+    @Column(name = "file_name", nullable = false)
     private String fileName;
 
     @OneToOne

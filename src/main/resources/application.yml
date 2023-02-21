@@ -8,9 +8,11 @@ spring:
       database: test
       port: 27017
       host: localhost
-
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
 server:
   port: 8081
-
 
 uploadFolder: D://photo/

@@ -24,16 +24,16 @@ public class FamilyMember {
     @Column(name = "id")
     private Integer Id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "age")
+    @Column(name = "age", nullable = false)
     private Integer age;
 
-    @Column(name = "birth_date")
-    private LocalDate birthDate;
+    @Column(name = "date_of_birth", nullable = false)
+    private LocalDate dateOfBirth;
 
-    @Column(name = "relation")
+    @Column(name = "relation", nullable = false)
     @Enumerated(EnumType.STRING)
     private Relation relation;
 
